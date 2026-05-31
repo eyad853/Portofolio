@@ -15,7 +15,7 @@ const contactItems = [
     label: "Email",
     value: contact.email.label,
     onclick: ()=>{
-      openLink(contact.email.app , contact.email.web)
+      window.open(  "https://mail.google.com/mail/u/0/#inbox?compose=new",  "_blank")
     },
     icon: MdEmail,
     color: "#9333ea",
@@ -90,7 +90,7 @@ const Contact = () => (
         {contactItems.map((item, i) => (
           <motion.a
             key={item.label}
-            onclick={item.onclick}
+            onClick={item.onclick}
             target="_blank"
             rel="noopener noreferrer"
             {...fadeUp(0.1 + i * 0.08)}
@@ -137,17 +137,19 @@ const Contact = () => (
             Ready to start a project?
           </h3>
           <p className="text-purple-200/60 font-body mb-8 max-w-md mx-auto">
-            I'm currently available for freelance work and open to full-time opportunities.
+            I'm currently available for freelance work and open to fulltime opportunities.
             Let's create something amazing.
           </p>
           <motion.a
-            onclick={openLink(contact.email.app , contact.email.web)}
+            onClick={()=>{window.open("https://mail.google.com/mail/u/0/#inbox?compose=new",  "_blank")}}
             className="inline-block cursor-pointer px-10 py-4 rounded-xl font-display font-bold text-white text-sm"
             style={{ background: "linear-gradient(135deg, #7c3aed, #e11d48)" }}
             whileHover={{ scale: 1.06, boxShadow: "0 0 40px rgba(147,51,234,0.5)" }}
             whileTap={{ scale: 0.96 }}
           >
-            Start a Conversation ✉️
+            <div className="flex gap-3 items-center">
+              Start a Conversation <MdEmail />
+            </div>
           </motion.a>
         </div>
       </motion.div>
@@ -158,14 +160,6 @@ const Contact = () => (
       {...fadeUp(0.5)}
       className="text-center mt-16 text-purple-400/40 text-sm font-mono"
     >
-      <div
-        className="h-px w-32 mx-auto mb-6"
-        style={{ background: "linear-gradient(90deg, transparent, rgba(147,51,234,0.4), transparent)" }}
-      />
-      Designed & built by{" "}
-      <span className="text-purple-400">Your Name</span> · {new Date().getFullYear()}
-      <br />
-      <span className="text-xs opacity-60 mt-1 block">Built with React + Tailwind + Framer Motion</span>
     </motion.div>
   </section>
 );

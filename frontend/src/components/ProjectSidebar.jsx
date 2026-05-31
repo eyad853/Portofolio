@@ -15,6 +15,8 @@ const ProjectSidebar = ({ project, onClose }) => {
     return () => window.removeEventListener("keydown", handler);
   }, [onClose]);
 
+  const images = []
+
   return (
     <AnimatePresence>
       {project && (

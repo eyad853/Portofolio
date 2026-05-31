@@ -21,6 +21,10 @@ const About = () => {
     { text: "Easy to work with, clear communication, no overcomplicating things" },
   ]
 
+  const text1 = `My name is Eyad Mosa. I'm a full-stack developer, and the thing that genuinely gets me going is taking a messy problem and turning it into something elegant.`
+  const text2 = `I work with React, Next.js, Node, Python, MongoDB, and SQL — but the stack is secondary. What matters more is how I think: methodically, end to end, with an eye on what breaks things before they break. I write code I'm not embarrassed to open six months later.`
+  const text3 = `I don't believe in over-engineering, and I don't believe in shortcuts. There's usually a clean middle — and finding it is what I do best.`
+
   return (
     <section id="about" className="relative py-28 px-6">
       <div className="max-w-6xl mx-auto">
@@ -47,14 +51,13 @@ const About = () => {
           {/* Left — story */}
           <div>
             <motion.p {...fadeUp(0.1)} className="text-purple-200/70 text-lg leading-relaxed mb-6 font-body">
-              Hey! I'm a full-stack developer who thrives at the intersection of design and
-              engineering. I build web applications that are not just functional, but
-              genuinely delightful to use.
+              {text1}
             </motion.p>
             <motion.p {...fadeUp(0.2)} className="text-purple-200/70 text-lg leading-relaxed mb-10 font-body">
-              From crafting responsive UIs with React to architecting scalable backends with
-              Node.js and designing efficient databases — I handle the full picture. I'm
-              obsessed with performance, clean code, and shipping things that matter.
+              {text2}
+            </motion.p>
+            <motion.p {...fadeUp(0.2)} className="text-purple-200/70 text-lg leading-relaxed mb-10 font-body">
+              {text3}
             </motion.p>
           </div>
 

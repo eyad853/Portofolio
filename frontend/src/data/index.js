@@ -50,7 +50,7 @@ export const projects = [
     accentColor: "#e11d48",
     year: "2025",
     status: "Live",
-    emoji: "🛒",
+    images:[]
   },
   {
     id: 2,
@@ -65,7 +65,7 @@ export const projects = [
     accentColor: "#9333ea",
     year: "2025",
     status: "Live",
-    emoji: "🧠",
+    images:[]
   },
   {
     id: 3,
@@ -80,7 +80,7 @@ export const projects = [
     accentColor: "#f59e0b",
     year: "2025",
     status: "Live",
-    emoji: "📊",
+    images:[]
   },
   {
     id: 4,
@@ -94,8 +94,8 @@ export const projects = [
     color: "#06b6d4",
     accentColor: "#9333ea",
     year: "2026",
-    status: "Live",
-    emoji: "✈️",
+    status: "Coming",
+    images:[]
   },
 ];
 
@@ -126,12 +126,16 @@ export const contact = {
 };
 
 export const openLink = (appLink, webLink) => {
+  if (webLink.startsWith("mailto:")) {
+    window.location.href = webLink;
+    return;
+  }
+
   const isMobile = /iPhone|Android/i.test(navigator.userAgent);
 
   if (isMobile && appLink) {
     window.location.href = appLink;
 
-    // fallback to web if app not installed
     setTimeout(() => {
       window.location.href = webLink;
     }, 1500);

@@ -55,9 +55,7 @@ const Navbar = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <span className="text-white">&lt;</span>
-            <span className="text-purple-400">Dev</span>
-            <span className="text-white">/&gt;</span>
+
           </motion.button>
 
           {/* Desktop Links */}

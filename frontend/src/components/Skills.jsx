@@ -87,7 +87,7 @@ const Skills = () => {
             </span>
           </h2>
           <p className="text-purple-200/50 mt-4 max-w-md mx-auto font-body">
-            Technologies I've mastered across the full stack — frontend, backend, databases & DevOps.
+            Technologies I've mastered across the full stack frontend, backend, databases & DevOps.
           </p>
         </motion.div>
 
@@ -119,7 +119,7 @@ const Skills = () => {
             <div key={item.label}>
               <div 
               style={{ color: item.color }}              
-              className={`text-2xl mb-1 flex justify-center mb-3`}>{item.icon}</div>
+              className={`text-2xl flex justify-center mb-3`}>{item.icon}</div>
               <div className="text-white font-display font-semibold text-sm">{item.label}</div>
               <div className="text-purple-400 text-xs font-mono mt-0.5">{item.val}</div>
             </div>

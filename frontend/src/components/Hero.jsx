@@ -10,6 +10,12 @@ const fadeUp = (delay = 0) => ({
 const Hero = () => {
   const scrollTo = (id) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 
+  const introduction = `Tired of messy code that breaks every time you need an update?
+                        Struggling with systems that won't talk to each other? 
+                        Need dashboards that actually work?
+                        
+                        I build web applications that are clean, maintainable, and actually do what you need them to do without the headaches.`
+
   return (
     <section id="hero" className="relative min-h-screen flex items-center pt-24 pb-16 px-6">
       <div className="max-w-6xl mx-auto w-full">
@@ -45,11 +51,9 @@ const Hero = () => {
 
             <motion.p
               {...fadeUp(0.3)}
-              className="text-purple-200/60 text-lg leading-relaxed mb-10 max-w-xl font-body"
+              className="text-purple-200/60 text-lg leading-relaxed mb-10 max-w-xl font-body whitespace-pre-line"
             >
-              I craft performant, scalable full-stack applications — from pixel-perfect UIs
-              to robust server architectures. Passionate about clean code, great DX, and
-              pushing what's possible on the web.
+            {introduction}
             </motion.p>
 
             <motion.div {...fadeUp(0.4)} className="flex flex-wrap gap-4">
@@ -138,14 +142,14 @@ const Hero = () => {
               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
               className="absolute -right-4 top-8 card-glass gradient-border rounded-xl px-3 py-2 text-xs font-mono text-purple-300"
             >
-              ⚡ Open to work
+              Open to work
             </motion.div>
             <motion.div
               animate={{ y: [6, -6, 6] }}
               transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
               className="absolute -left-4 bottom-10 card-glass gradient-border rounded-xl px-3 py-2 text-xs font-mono text-yellow-300"
             >
-              🚀 React + Node
+              React + Node
             </motion.div>
           </motion.div>
         </div>
