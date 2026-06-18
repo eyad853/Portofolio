@@ -5,8 +5,12 @@ import About from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
+import ImageModal from "./components/imageModal";
+import { useState } from "react";
 
 function App() {
+  const [imageSrc, setImageSrc] = useState(null);
+
   return (
     <div className="relative min-h-screen">
       <AnimatedBackground />
@@ -16,10 +20,11 @@ function App() {
           <Hero />
           <About />
           <Skills />
-          <Projects />
+          <Projects setImageSrc={setImageSrc}/>
           <Contact />
         </main>
       </div>
+      <ImageModal imageSrc={imageSrc} setImageSrc={setImageSrc}/>
     </div>
   );
 }

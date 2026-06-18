@@ -77,7 +77,7 @@ const ProjectCard = ({ project, onClick }) => (
   </motion.div>
 );
 
-const Projects = () => {
+const Projects = ({setImageSrc}) => {
   const [selected, setSelected] = useState(null);
   const containerRef = useRef(null);
 
@@ -164,7 +164,7 @@ const Projects = () => {
 
       {/* Sidebar */}
       {selected && (
-        <ProjectSidebar project={selected} onClose={() => setSelected(null)} />
+        <ProjectSidebar project={selected} onClose={() => setSelected(null)} setImageSrc={setImageSrc}/>
       )}
     </>
   );

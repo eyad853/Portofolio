@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect } from "react";
 
-const ProjectSidebar = ({ project, onClose }) => {
+const ProjectSidebar = ({ project, onClose , setImageSrc }) => {
   // Lock body scroll when sidebar is open
   useEffect(() => {
     document.body.style.overflow = "hidden";
@@ -84,7 +84,7 @@ const ProjectSidebar = ({ project, onClose }) => {
                 transition={{ delay: 0.18 }}
                 className="text-purple-300/60 font-body mb-6 cursor-pointer transform hover:scale-105 transition-all duration-300"
               >
-                <img src={project.mainImage} className="w-full h-full object-cover rounded-md cursor-pointer" />
+                <img onClick={()=>{setImageSrc(project.mainImage)}} src={project.mainImage} className="w-full h-full object-cover rounded-md cursor-pointer" />
               </motion.p>
 
               {/* Description */}
@@ -166,7 +166,7 @@ const ProjectSidebar = ({ project, onClose }) => {
                     transition={{ delay: 0.22 }}
                     className="text-purple-200/70 leading-relaxed font-body mb-8 cursor-pointer"
                   >
-                    <img src={image} className="w-full h-full object-cover rounded-md cursor-pointer" />
+                    <img onClick={()=>{setImageSrc(image)}} src={image} className="w-full h-full object-cover rounded-md cursor-pointer" />
                   </motion.p>
                 ))
               )}
