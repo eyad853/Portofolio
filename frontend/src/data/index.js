@@ -40,7 +40,7 @@ export const projects = [
   {
     id: 1,
     title: "E-Commerce Platform",
-    subtitle: "Full-Stack E-Commerce & Admin Management",
+    subtitle: "Full Stack E-Commerce & Admin Management",
     description:
       "A complete online store with product browsing, cart, and checkout, paired with a super admin dashboard for managing products, orders, and users behind the scenes.",
     tags: ["ReactJS" ,"TailwindCss", "Node.js", "Express.js" , "MongoDb", "Stripe", "Socket.io"],
@@ -62,7 +62,7 @@ export const projects = [
   {
     id: 2,
     title: "Social Media App",
-    subtitle: "Real-Time Social Networking App",
+    subtitle: "Real Time Social Networking App",
     description:
       "A social media app with feed posts, friend system, notifications, user profiles, and real-time chat for seamless communication.",
     tags: ["ReactJS" ,"TailwindCss", "Node.js", "Express.js" , "MongoDb", "Socket.io"],
@@ -84,7 +84,7 @@ export const projects = [
   {
     id: 3,
     title: "Task Management System",
-    subtitle: "An all-in-one productivity engine for personal and team workflows.",
+    subtitle: "An all in one productivity engine for personal and team workflows.",
     description:
       "A productivity tool combining todos, Kanban boards, calendar scheduling, and notes to help organize tasks and manage workflows efficiently.",
     tags: ["ReactJS" ,"TailwindCss", "Node.js", "Express.js" , "MongoDb", "Socket.io"],
