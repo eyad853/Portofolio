@@ -81,7 +81,7 @@ const About = () => {
                   <p className="text-purple-400/60 text-xs font-mono uppercase tracking-wider mb-1">
                     {item.label}
                   </p>
-                  <p className="text-white font-semibold font-body text-sm">{item.value}</p>
+                  <p className="text-white font-semibold font-body text-sm break-all">{item.value}</p>
                 </motion.div>
               ))}
             </div>
