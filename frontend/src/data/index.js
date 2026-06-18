@@ -40,63 +40,86 @@ export const projects = [
   {
     id: 1,
     title: "E-Commerce Platform",
-    subtitle: "Full-stack online store with authentication, product management, and secure checkout.",
+    subtitle: "Full-Stack E-Commerce & Admin Management",
     description:
-      "A high-performance e-commerce platform built with Next.js, Node.js, and PostgreSQL. Features real-time inventory management, Stripe payments, advanced filtering, and an admin dashboard. Handles 10k+ concurrent users.",
+      "A complete online store with product browsing, cart, and checkout, paired with a super admin dashboard for managing products, orders, and users behind the scenes.",
     tags: ["ReactJS" ,"TailwindCss", "Node.js", "Express.js" , "MongoDb", "Stripe", "Socket.io"],
     github: "https://github.com/eyad853/Portofolio-E-Commerce-Store",
     live: "https://portofolio-e-commerce-store.vercel.app",
     color: "#9333ea",
     accentColor: "#e11d48",
-    year: "2025",
-    status: "Live",
-    images:[]
+    coverPhoto:"/ecommerce/main.png",
+    isServerOpen:false,
+    mainImage:"/ecommerce/main.png",
+    images:[
+      "/ecommerce/images/main.png",
+      "/ecommerce/images/details.png",
+      "/ecommerce/images/cart.png",
+      "/ecommerce/images/dashboard.png",
+      "/ecommerce/images/createProduct.png",
+    ]
   },
   {
     id: 2,
     title: "Social Media App",
-    subtitle: "Real-time platform with posts, interactions, and user connections.",
+    subtitle: "Real-Time Social Networking App",
     description:
-      "An intelligent workspace integrating GPT-4 for task automation, code review, and content generation. Built with React, FastAPI, and WebSockets for real-time collaboration. Features a custom vector database for context-aware responses.",
+      "A social media app with feed posts, friend system, notifications, user profiles, and real-time chat for seamless communication.",
     tags: ["ReactJS" ,"TailwindCss", "Node.js", "Express.js" , "MongoDb", "Socket.io"],
     github: "https://github.com/eyad853/Portofolio-Social-Media-App",
     live: "https://portofolio-social-media-app.vercel.app/",
     color: "#f59e0b",
     accentColor: "#9333ea",
-    year: "2025",
-    status: "Live",
-    images:[]
+    coverPhoto:"/socialMedia/main.png",
+    isServerOpen:false,
+    mainImage:"/socialMedia/main.png",
+    images:[
+      "/socialMedia/images/feed.png",
+      "/socialMedia/images/profile.png",
+      "/socialMedia/images/settings.png",
+      "/socialMedia/images/friends.png",
+      "/socialMedia/images/chat.png",
+    ]
   },
   {
     id: 3,
     title: "Task Management System",
-    subtitle: "Productivity app for managing tasks, deadlines, and workflows efficiently.",
+    subtitle: "An all-in-one productivity engine for personal and team workflows.",
     description:
-      "A real-time data visualization platform processing millions of events per second. Built with React, GraphQL subscriptions, ClickHouse, and Kafka. Supports custom dashboards, alerts, and predictive analytics.",
+      "A productivity tool combining todos, Kanban boards, calendar scheduling, and notes to help organize tasks and manage workflows efficiently.",
     tags: ["ReactJS" ,"TailwindCss", "Node.js", "Express.js" , "MongoDb", "Socket.io"],
     github: "https://github.com/eyad853/Portofolio-Task-Management-App",
     live: "https://portofolio-task-management-app.vercel.app/",
     color: "#e11d48",
     accentColor: "#f59e0b",
-    year: "2025",
-    status: "Live",
-    images:[]
+    coverPhoto:"/taskManagement/main.png",
+    isServerOpen:false,
+    mainImage:"/taskManagement/main.png",
+    images:[
+      "/taskManagement/images/dashboard.png",
+      "/taskManagement/images/todo.png",
+      "/taskManagement/images/settings.png",
+      "/taskManagement/images/notes.png",
+      "/taskManagement/images/calendar.png",
+    ]
   },
-  {
-    id: 4,
-    title: "Moujood",
-    subtitle: "Travel & Community App",
-    description:
-      "A social travel platform connecting digital nomads worldwide. Features itinerary planning, real-time chat, location-based recommendations, and a marketplace. Built with React Native for mobile and Next.js for web.",
-    tags: ["ReactJS" ,"TailwindCss", "Node.js", "Express.js" , "PostgresSQL", "Socket.io"],
-    github: "https://github.com",
-    live: "https://example.com",
-    color: "#06b6d4",
-    accentColor: "#9333ea",
-    year: "2026",
-    status: "Coming",
-    images:[]
-  },
+  // {
+  //   id: 4,
+  //   title: "Moujood",
+  //   subtitle: "Travel & Community App",
+  //   description:
+  //     "A social travel platform connecting digital nomads worldwide. Features itinerary planning, real-time chat, location-based recommendations, and a marketplace. Built with React Native for mobile and Next.js for web.",
+  //   tags: ["ReactJS" ,"TailwindCss", "Node.js", "Express.js" , "PostgresSQL", "Socket.io"],
+  //   github: "https://github.com",
+  //   live: "https://example.com",
+  //   color: "#06b6d4",
+  //   accentColor: "#9333ea",
+  //   coverPhoto:"",
+  //   mainImage:"",
+  //   images:[
+  //     "/"
+  //   ]
+  // },
 ];
 
 export const contact = {

@@ -46,7 +46,7 @@ const ScrollRow = ({ items, direction = 1, label }) => {
       </div>
       <div
         ref={containerRef}
-        className="flex gap-4 overflow-x-auto scrollbar-hide pb-2"
+        className="flex gap-4 overflow-x-auto scrollbar-hide py-2"
       >
         {items.map((skill) => (
           <SkillCard key={skill.id} skill={skill} />

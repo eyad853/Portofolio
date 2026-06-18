@@ -149,7 +149,7 @@ const Hero = () => {
               transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
               className="absolute -left-4 bottom-10 card-glass gradient-border rounded-xl px-3 py-2 text-xs font-mono text-yellow-300"
             >
-              React + Node
+              Full Stack Developer
             </motion.div>
           </motion.div>
         </div>

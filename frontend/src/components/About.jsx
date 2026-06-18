@@ -11,19 +11,19 @@ const About = () => {
   const info = [
     { label: "Name", value: "Eyad Mosa" },
     { label: "Role", value: "Full Stack Developer" },
-    { label: "Available", value: "Freelance & Full-time" },
-    { label: "Email", value: "eyadmosa853@yourname.dev" },
+    { label: "Available", value: "Freelance & Full time" },
+    { label: "Email", value: "eyadmosa853@gmail.com" },
   ];
 
   const coreValues = [
-    { text: "I care about making things fast and smooth, not just “working”" },
-    { text: "I pay attention to the small details that make a design feel right" },
-    { text: "Easy to work with, clear communication, no overcomplicating things" },
+    { text: `Performance Driven: I care about making things fast, smooth, and optimized ... not just "working"` },
+    { text: `Detail Oriented: I pay close attention to the micro interactions and small design details that make a product feel right` },
+    { text: `No Nonsense Collaboration: Easy to work with, clear and transparent communication, and zero unnecessary complexity.` },
   ]
 
-  const text1 = `My name is Eyad Mosa. I'm a full-stack developer, and the thing that genuinely gets me going is taking a messy problem and turning it into something elegant.`
-  const text2 = `I work with React, Next.js, Node, Python, MongoDB, and SQL — but the stack is secondary. What matters more is how I think: methodically, end to end, with an eye on what breaks things before they break. I write code I'm not embarrassed to open six months later.`
-  const text3 = `I don't believe in over-engineering, and I don't believe in shortcuts. There's usually a clean middle — and finding it is what I do best.`
+  const text1 = `Hi, I'm Eyad Mosa. I'm a fullstack developer who likes taking messy problems and turning them into something clean and simple.`
+  const text2 = `While my core stack includes React, Next.js, Node.js, Python, and SQL/NoSQL databases, my real value lies in my approach. I build with an end to end perspective, engineering against future failure points and ensuring codebases remain clean, readable, and highly maintainable.`
+  const text3 = `No over engineering. No cheap shortcuts. Just fast, smooth, and intentional software.`
 
   return (
     <section id="about" className="relative py-28 px-6">
@@ -95,7 +95,7 @@ const About = () => {
               </p>
               <div className="space-y-2">
                 {coreValues.map((v) => (
-                  <div key={v.text} className="flex items-center gap-3 text-sm text-purple-200/70 font-body">
+                  <div key={v.text} className="flex items-center gap-3 text-xs text-purple-200/70 font-body">
                     <span>{v.text}</span>
                   </div>
                 ))}

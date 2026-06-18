@@ -19,6 +19,10 @@ const ProjectCard = ({ project, onClick }) => (
         background: `radial-gradient(circle at 30% 40%, ${project.color}30, transparent 60%), radial-gradient(circle at 70% 70%, ${project.accentColor}20, transparent 50%), #0d0b1a`,
       }}
     >
+        <img
+          src={project.coverPhoto}
+          className="w-full h-full object-cover"
+        />
       {/* Grid lines */}
       <div
         className="absolute inset-0"
@@ -27,27 +31,6 @@ const ProjectCard = ({ project, onClick }) => (
           backgroundSize: "20px 20px",
         }}
       />
-      <span className="text-7xl relative z-10">{project.emoji}</span>
-
-      {/* Status badge */}
-      <div
-        className="absolute top-3 right-3 text-xs font-mono px-2 py-1 rounded-lg"
-        style={{
-          background: project.status === "Live" ? "rgba(34,197,94,0.15)" : "rgba(245,158,11,0.15)",
-          color: project.status === "Live" ? "#4ade80" : "#f59e0b",
-          border: `1px solid ${project.status === "Live" ? "rgba(34,197,94,0.3)" : "rgba(245,158,11,0.3)"}`,
-        }}
-      >
-        ● {project.status}
-      </div>
-
-      {/* Year */}
-      <div
-        className="absolute top-3 left-3 text-xs font-mono px-2 py-1 rounded-lg"
-        style={{ background: "rgba(7,5,16,0.6)", color: "rgba(200,180,255,0.6)" }}
-      >
-        {project.year}
-      </div>
 
       {/* Hover reveal */}
       <motion.div
@@ -67,8 +50,8 @@ const ProjectCard = ({ project, onClick }) => (
 
     {/* Card body */}
     <div className="p-5">
-      <h3 className="font-display font-bold text-lg text-white mb-1">{project.title}</h3>
-      <p className="text-purple-300/60 text-xs font-body mb-3">{project.subtitle}</p>
+      <h3 className="font-display font-bold text-lg text-white mb-1 line-clamp-1">{project.title}</h3>
+      <p className="text-purple-300/60 text-xs font-body mb-3 line-clamp-2">{project.subtitle}</p>
       <p className="text-purple-200/60 text-sm leading-relaxed line-clamp-2 font-body mb-4">
         {project.description}
       </p>
@@ -160,7 +143,7 @@ const Projects = () => {
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.7, delay: 0.1 }}
             ref={containerRef}
-            className="flex gap-5 overflow-x-auto scrollbar-hide pb-4"
+            className="flex gap-5 items-center justify-around overflow-x-auto  scrollbar-hide py-4"
           >
             {projects.map((project) => (
               <ProjectCard key={project.id} project={project} onClick={setSelected} />

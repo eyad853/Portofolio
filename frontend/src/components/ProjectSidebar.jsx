@@ -60,33 +60,6 @@ const ProjectSidebar = ({ project, onClose }) => {
                 ✕
               </motion.button>
 
-              {/* Emoji + Year */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 }}
-                className="flex items-center gap-3 mb-4"
-              >
-                <span className="text-5xl">{project.emoji}</span>
-                <div>
-                  <span
-                    className="text-xs font-mono px-2 py-1 rounded-md"
-                    style={{ background: "rgba(147,51,234,0.2)", color: project.color }}
-                  >
-                    {project.year}
-                  </span>
-                  <span
-                    className="ml-2 text-xs font-mono px-2 py-1 rounded-md"
-                    style={{
-                      background: project.status === "Live" ? "rgba(34,197,94,0.15)" : "rgba(245,158,11,0.15)",
-                      color: project.status === "Live" ? "#4ade80" : "#f59e0b",
-                    }}
-                  >
-                    ● {project.status}
-                  </span>
-                </div>
-              </motion.div>
-
               {/* Title */}
               <motion.h2
                 initial={{ opacity: 0, y: 20 }}
@@ -103,6 +76,15 @@ const ProjectSidebar = ({ project, onClose }) => {
                 className="text-purple-300/60 font-body mb-6"
               >
                 {project.subtitle}
+              </motion.p>
+
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.18 }}
+                className="text-purple-300/60 font-body mb-6 cursor-pointer transform hover:scale-105 transition-all duration-300"
+              >
+                <img src={project.mainImage} className="w-full h-full object-cover rounded-md cursor-pointer" />
               </motion.p>
 
               {/* Description */}
@@ -138,12 +120,23 @@ const ProjectSidebar = ({ project, onClose }) => {
                 </div>
               </motion.div>
 
+              {!project.isServerOpen&&(<motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.34 }}
+                className="flex gap-3 mb-10"
+              >
+                <div className="w-full py-5 px-2 border-2 border-orange-500 bg-yellow-800 rounded-md">
+                  ⚠️ Note: The live demo is currently unavailable because the backend server is temporarily offline. The project source code and implementation details are still available for review. The live demo will be restored once the server is back online.
+                </div>
+              </motion.div>)}
+
               {/* CTA buttons */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.34 }}
-                className="flex gap-3"
+                className="flex gap-3 mb-10"
               >
                 <a
                   href={project.live}
@@ -164,6 +157,19 @@ const ProjectSidebar = ({ project, onClose }) => {
                   GitHub ↗
                 </a>
               </motion.div>
+
+              {project.images.length>0&&(
+                project.images.map(image=>(
+                  <motion.p
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.22 }}
+                    className="text-purple-200/70 leading-relaxed font-body mb-8 cursor-pointer"
+                  >
+                    <img src={image} className="w-full h-full object-cover rounded-md cursor-pointer" />
+                  </motion.p>
+                ))
+              )}
             </div>
           </motion.div>
         </>
